@@ -3,31 +3,26 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
 
 public class BaseTests {
-    private WebDriver driver;
+    protected WebDriver driver;
     protected HomePage homePage;
-    @BeforeClass
+    protected final String amazonURL = "https://www.amazon.com/";
+
     public void setUp() throws InterruptedException {
+        System.out.println("Before Base Class");
         System.setProperty("webdriver.edge.driver","resources/msedgedriver.exe");
         driver = new EdgeDriver();
-        goToHomePage();
+        driver.get(amazonURL);
         Thread.sleep(10000);
         homePage = new HomePage(driver);
     }
-
-    @BeforeMethod
-    public void goToHomePage()  {
-        driver.get("https://www.amazon.com/");
-    }
-
     @AfterClass
     public void tearDown() {
-       driver.quit();
+        driver.quit();
     }
+
 
 }

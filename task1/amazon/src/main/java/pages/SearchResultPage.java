@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class SearchResultPage {
     private WebDriver driver;
@@ -14,12 +13,12 @@ public class SearchResultPage {
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
     }
-    public ItemDetailsPage clickFirstItem(){
+    public ItemPage clickFirstItem(){
         // waits until the page loads and the item is clickable
-//        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(firstResultTitle)));
+        wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(firstResultTitle)));
         driver.findElement(firstResultTitle).click();
-        return new ItemDetailsPage(driver);
+        return new ItemPage(driver);
     }
     public String getFirstItemTitle(){
         return driver.findElement(firstResultTitle).getText();
