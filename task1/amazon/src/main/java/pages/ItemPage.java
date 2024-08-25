@@ -14,4 +14,7 @@ public class ItemPage {
         driver.findElement(addToCartButton).click();
         return new addedToCartPage(driver);
     }
+    public String getItemTitle() {
+        return driver.findElement(itemTitle).getText();
+    }
 }

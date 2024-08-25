@@ -8,6 +8,7 @@ public class HomePage {
     private By SearchBox = By.id("twotabsearchtextbox");
     private By SearchButton = By.id("nav-search-submit-button");
     private By cartButton = By.id("nav-cart");
+    private By todaysDealsButton = By.linkText("Today's Deals");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -20,5 +21,9 @@ public class HomePage {
     public CartPage goToCart() {
         driver.findElement(cartButton).click();
         return new CartPage(driver);
+    }
+    public TodaysDealsPage goToTodaysDdeals(){
+        driver.findElement(todaysDealsButton).click();
+        return new TodaysDealsPage(driver);
     }
 }

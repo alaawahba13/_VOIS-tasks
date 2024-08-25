@@ -19,10 +19,10 @@ public class SearchSteps extends BaseTests  {
     private String ItemTitle;
     private CartPage cartPage;
 
-    @Before
-    public void before() throws InterruptedException {
-        setUp();
-    }
+//    @Before
+//    public void before() throws InterruptedException {
+//        setUp();
+//    }
 
     @Given("I am on the Amazon home page")
     public void iAmOnAnyPage() {
@@ -34,8 +34,8 @@ public class SearchSteps extends BaseTests  {
     }
     @And("Choosing the first item")
     public void choosingTheFirstItem() {
-        ItemTitle = searchResultPage.getFirstItemTitle();
         itemPage = searchResultPage.clickFirstItem();
+        ItemTitle = itemPage.getItemTitle();
         System.out.println("Item title:"+ItemTitle);
     }
 
@@ -48,7 +48,6 @@ public class SearchSteps extends BaseTests  {
     public void theItemShouldBeAddedSuccessfullyInTheCart() {
         cartPage = homePage.goToCart();
         String lastAddedItem = cartPage.getFirstCartItem();
-        lastAddedItem =lastAddedItem.replace("...","");
         System.out.println("Item Title in Cart: "+ lastAddedItem);
         assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
 
