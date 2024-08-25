@@ -1,8 +1,6 @@
 package steps;
 
 import base.BaseTests;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +11,6 @@ import pages.TodaysDealsPage;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -22,10 +19,7 @@ public class FilterSteps extends BaseTests {
     private TodaysDealsPage todaysDealsPage;
     private CartPage cartPage;
     private String ItemTitle;
-    @Before
-    public void before() throws InterruptedException {
-        setUp();
-    }
+
     @Given("I am on the Today's Deals Page")
     public void iAmOnTheTodaySDealsPage() {
         todaysDealsPage =  homePage.goToTodaysDdeals();
@@ -65,9 +59,5 @@ public class FilterSteps extends BaseTests {
         System.out.println("Item Title in Cart: "+ lastAddedItem);
         assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
     }
-//    @After
-//    public void tearDown() {
-//        driver.quit();
-//    }
 
 }

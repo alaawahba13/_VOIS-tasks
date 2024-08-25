@@ -7,11 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
-    private WebDriver driver;
-    private By SearchBox = By.id("twotabsearchtextbox");
-    private By SearchButton = By.id("nav-search-submit-button");
-    private By cartButton = By.id("nav-cart");
-    private By todaysDealsButton = By.linkText("Today's Deals");
+    private final WebDriver driver;
+    private final By SearchBox = By.id("twotabsearchtextbox");
+    private final By SearchButton = By.id("nav-search-submit-button");
+    private final By cartButton = By.id("nav-cart");
+    private final By todaysDealsButton = By.linkText("Today's Deals");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;

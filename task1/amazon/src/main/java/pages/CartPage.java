@@ -13,9 +13,4 @@ public class CartPage {
     public String getFirstCartItem() {
         return driver.findElement(cart).getText();
     }
-//    public List<String> getCartItems() {
-//        driver.findElements(cart).get(0).getText();
-//    }
-
-
 }

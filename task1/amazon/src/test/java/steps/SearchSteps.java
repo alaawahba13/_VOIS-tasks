@@ -1,7 +1,6 @@
 package steps;
 
 import base.BaseTests;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,11 +17,6 @@ public class SearchSteps extends BaseTests  {
     private ItemPage itemPage;
     private String ItemTitle;
     private CartPage cartPage;
-
-//    @Before
-//    public void before() throws InterruptedException {
-//        setUp();
-//    }
 
     @Given("I am on the Amazon home page")
     public void iAmOnAnyPage() {

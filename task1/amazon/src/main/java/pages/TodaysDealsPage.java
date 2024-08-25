@@ -5,11 +5,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TodaysDealsPage {
-    private WebDriver driver;
+    private final WebDriver driver;
     private String rowIndex;
-    private By seeMoreButton = By.linkText("See more");
-    private WebDriverWait wait ;
-    private static boolean buttonClicked= false;
+    private final By seeMoreButton = By.linkText("See more");
+    private final WebDriverWait wait ;
     public TodaysDealsPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 40);
@@ -27,11 +26,11 @@ public class TodaysDealsPage {
     }
     public void selectDeal(String deal) {
         By dealRadioButton = By.xpath("//div[@data-csa-c-element-id=\"filter-percentOff-10% off or more\"]//i");
-        WebElement dicountLabel = driver.findElement(By.id("percentOff"));
+        WebElement discountLabel = driver.findElement(By.id("percentOff"));
         // Scroll to discount section
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String script = "arguments[0].scrollIntoView()";
-        js.executeScript(script, dicountLabel);
+        js.executeScript(script, discountLabel);
         driver.findElement(dealRadioButton).click();
     }
     public void scrollToRow(String rowIndex){

@@ -2,11 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
 
 
 public class SearchResultPage {
@@ -22,8 +19,5 @@ public class SearchResultPage {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(firstResultTitle)));
         driver.findElement(firstResultTitle).click();
         return new ItemPage(driver);
-    }
-    public String getFirstItemTitle(){
-        return driver.findElement(firstResultTitle).getText();
     }
 }
