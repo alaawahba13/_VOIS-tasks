@@ -29,8 +29,8 @@ public class TodaysDealsPage {
         By dealRadioButton = By.xpath("//div[@data-csa-c-element-id=\"filter-percentOff-10% off or more\"]//i");
         WebElement dicountLabel = driver.findElement(By.id("percentOff"));
         // Scroll to discount section
-        JavascriptExecutor js = (JavascriptExecutor) driver; // allows us to execute any js code
-        String script = "arguments[0].scrollIntoView()"; //arguments[0] is a placeholder for tableWebElement
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "arguments[0].scrollIntoView()";
         js.executeScript(script, dicountLabel);
         driver.findElement(dealRadioButton).click();
     }

@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90861be4-5f36-4c72-a49a-f8688ef642c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../amazon/src/main/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/main/java/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../amazon/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../amazon/src/main/java/pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/main/java/pages/ItemPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../amazon/src/test/java/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/test/java/steps/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../amazon/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../amazon/src/test/java/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/test/java/steps/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../amazon/src/main/java/pages/TodaysDealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../amazon/src/main/java/pages/TodaysDealsPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,23 +36,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.TestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/WahbaA2/Documents/intelleji/_VOIS-tasks/task2/BookingTrip/src/test/java/base&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.TestRunner.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/WahbaA2/Documents/intelleji/_VOIS-tasks/task2/BookingTrip/src/test/java/base",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WahbaA2\Documents\intelleji\_VOIS-tasks\task2\BookingTrip\src\test\java\base" />
@@ -108,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724529804227</updated>
       <workItem from="1724529809741" duration="8077000" />
-      <workItem from="1724573303053" duration="1713000" />
+      <workItem from="1724573303053" duration="26849000" />
     </task>
     <servers />
   </component>
