@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage {
     private WebDriver driver;
-    private By cart = By.xpath("//div[@class=\"sc-list-item-content\"]/div/div/ul/li");
+    private By cart = By.xpath("(//span[@class=\"a-truncate-cut\"])[1]");
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
