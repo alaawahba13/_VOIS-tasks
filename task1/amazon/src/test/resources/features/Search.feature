@@ -13,7 +13,7 @@ Feature: Search for item functionality
     Examples:
       |itemName|
       |"Car Accessories"|
-      |"Makeup"         |
+      |"Lipstick"         |
       |"Grocery"        |
 
 

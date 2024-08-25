@@ -36,7 +36,7 @@ public class SearchSteps extends BaseTests  {
     public void choosingTheFirstItem() {
         ItemTitle = searchResultPage.getFirstItemTitle();
         itemPage = searchResultPage.clickFirstItem();
-        System.out.println("first item:"+ItemTitle);
+        System.out.println("Item title:"+ItemTitle);
     }
 
     @And("Adding the item to the cart")
@@ -49,7 +49,7 @@ public class SearchSteps extends BaseTests  {
         cartPage = homePage.goToCart();
         String lastAddedItem = cartPage.getFirstCartItem();
         lastAddedItem =lastAddedItem.replace("...","");
-        System.out.println("Last item: "+ lastAddedItem);
+        System.out.println("Item Title in Cart: "+ lastAddedItem);
         assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
 
     }
