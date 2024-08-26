@@ -22,8 +22,8 @@ Scenario 2:
 -	go to the fourth page then select any item and add it to the cart
 
 ### Output
-![Screenshot 2024-08-26 014808](https://github.com/user-attachments/assets/f9f0ae89-3142-4dec-aeeb-058b96fab996)
 
+![Screenshot 2024-08-26 124208](https://github.com/user-attachments/assets/72f20eb3-0533-4f9c-bafe-94a8361d0d46)
 
 
 https://github.com/user-attachments/assets/12cc654d-336c-4089-9530-8064b9d7220b
