@@ -11,8 +11,8 @@ import pages.TodaysDealsPage;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class FilterSteps extends BaseTests {
@@ -56,10 +56,21 @@ public class FilterSteps extends BaseTests {
     @Then("item should be in the cart")
     public void itemShouldBeInTheCart() {
         cartPage = homePage.goToCart();
-        String lastAddedItem = cartPage.getFirstCartItem();
+        String originalTab = driver.getWindowHandle();
+        ItemPage itemPage = cartPage.getFirstCartItem();
+        Set<String> allTabs = driver.getWindowHandles();
+        for (String tab : allTabs) {
+            if (!tab.equals(originalTab)) {
+                // Switch to the new tab
+                driver.switchTo().window(tab);
+                break;
+            }
+        }
+        System.out.println("Title of new tab: " + driver.getTitle());
+        String lastAddedItem = itemPage.getItemTitle();
         System.out.println("Item Title in Cart: "+ lastAddedItem);
-//        assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
-        assertFalse(cartPage.isCartEmpty(),"Cart is empty");
+        driver.close();
+        assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
     }
 
 }

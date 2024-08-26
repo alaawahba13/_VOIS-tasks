@@ -8,8 +8,7 @@ import io.cucumber.java.en.When;
 import pages.CartPage;
 import pages.ItemPage;
 import pages.SearchResultPage;
-
-import static org.testng.Assert.assertFalse;
+import java.util.Set;
 import static org.testng.Assert.assertTrue;
 
 public class SearchSteps extends BaseTests  {
@@ -42,10 +41,22 @@ public class SearchSteps extends BaseTests  {
     @Then("The item should be added successfully in the cart")
     public void theItemShouldBeAddedSuccessfullyInTheCart() {
         cartPage = homePage.goToCart();
-        String lastAddedItem = cartPage.getFirstCartItem();
+        String originalTab = driver.getWindowHandle();
+        ItemPage itemPage = cartPage.getFirstCartItem();
+        Set<String> allTabs = driver.getWindowHandles();
+        for (String tab : allTabs) {
+            if (!tab.equals(originalTab)) {
+                // Switch to the new tab
+                driver.switchTo().window(tab);
+                break;
+            }
+        }
+        System.out.println("Title of new tab: " + driver.getTitle());
+        String lastAddedItem = itemPage.getItemTitle();
         System.out.println("Item Title in Cart: "+ lastAddedItem);
-//        assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
-        assertFalse(cartPage.isCartEmpty(),"Cart is empty");
+        driver.close();
+        driver.switchTo().window(originalTab);
+       assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
 
     }
 }

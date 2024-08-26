@@ -11,8 +11,9 @@ public class CartPage {
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
-    public String getFirstCartItem() {
-        return driver.findElement(cart).getText();
+    public ItemPage getFirstCartItem() {
+         driver.findElement(cart).click();
+         return new ItemPage(driver);
     }
     public boolean isCartEmpty(){
         try {

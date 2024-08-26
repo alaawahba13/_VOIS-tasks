@@ -5,6 +5,7 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import pages.HomePage;
 
@@ -13,6 +14,8 @@ public class Hooks extends BaseTests {
     public static void setUp() throws InterruptedException {
         System.out.println("Before Base Class");
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");  // Enable incognito mode
         driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1024, 768));
         driver.get(amazonURL);
