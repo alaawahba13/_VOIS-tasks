@@ -14,4 +14,4 @@ Feature: Filter and Add to Cart from Today's Deals
   Examples:
     | departmentFilter          | discountFilter         |
     | "Grocery"    | "10% off or more"      |
-    | "Electronics + Headphones, Earbuds & Accessories + Headphones & Earbuds" | "20% off or more"      |
+    | "Electronics + Headphones, Earbuds & Accessories" | "20% off or more"      |

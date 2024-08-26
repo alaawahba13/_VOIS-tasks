@@ -70,6 +70,7 @@ public class FilterSteps extends BaseTests {
         String lastAddedItem = itemPage.getItemTitle();
         System.out.println("Item Title in Cart: "+ lastAddedItem);
         driver.close();
+        driver.switchTo().window(originalTab);
         assertTrue(ItemTitle.contains(lastAddedItem),"Mismatched Titles");
     }
 
