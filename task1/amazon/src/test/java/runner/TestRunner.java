@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"steps","hooks"},
-        tags = "@SearchForItemAndAddToCart"
+        tags = "@FilterAndAddToCart or @SearchForItemAndAddToCart"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
