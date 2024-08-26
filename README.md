@@ -7,11 +7,26 @@ Scenario 1:
 -	Add item to the cart
 -	Go to the cart and check that item is added successfully
   
+### Output
+![Screenshot 2024-08-26 110321](https://github.com/user-attachments/assets/b546de59-612f-4e40-a2d2-b02b3ed4a900)
+
+
+https://github.com/user-attachments/assets/6fe613e2-ec82-43ef-9927-1440b1d9d594
+
+
+  
 Scenario 2: 
 -	Open today's deals
 -	from the left side filters select "Headphones" and "grocery"
 -	from the discount part choose "10% off or more"
 -	go to the fourth page then select any item and add it to the cart
+
+### Output
+![Screenshot 2024-08-26 014808](https://github.com/user-attachments/assets/f9f0ae89-3142-4dec-aeeb-058b96fab996)
+
+
+
+https://github.com/user-attachments/assets/12cc654d-336c-4089-9530-8064b9d7220b
 
 
 ## Task 2
